@@ -1,3 +1,8 @@
 module.exports = {
-  plugins: ['scss'],
+  plugins: [
+    'scss',
+    {
+      name: 'eslint'
+    },
+  ],
 }
