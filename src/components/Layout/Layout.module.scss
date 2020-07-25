@@ -1,0 +1,24 @@
+.isLarge {
+  width: 120rem;
+  margin: 0 auto;
+
+  &.withAside {
+    display: flex;
+    justify-content: space-between;
+
+    & > *:nth-child(1) {
+      width: 65%;
+    }
+
+    & > *:nth-child(2) {
+      width: 30%;
+    }
+  }
+}
+
+
+
+.isSmall {
+  width: 28rem;
+  margin: 0 auto;
+}

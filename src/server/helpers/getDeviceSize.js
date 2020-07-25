@@ -7,12 +7,10 @@ const getDeviceSize = (req) => {
 
   // определяем тип устройства
   const isSmall = uaParser.getDevice()?.type === 'mobile'
-  const isMedium = uaParser.getDevice()?.type === 'tablet'
 
   return {
-    currentDevice: isMedium ? 'isMedium' : isSmall ? 'isSmall' : 'isLarge',
-    isLarge: !isSmall && !isMedium,
-    isMedium,
+    currentDevice: isSmall ? 'isSmall' : 'isLarge',
+    isLarge: !isSmall,
     isSmall
   }
 }

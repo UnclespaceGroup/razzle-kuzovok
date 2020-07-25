@@ -7,8 +7,12 @@ html {
     font-size: calc(100vw / 320 * 10);
   }
 
-  @media all and (min-width: 767px) and (max-width: 1600px) {
-    font-size: calc(100vw / 1500 * 10);
+  @media all and (min-width: 767px) and (max-width: 1365px) {
+    font-size: calc(100vw / 1300 * 10);
+  }
+
+  @media all and (min-width: 1365px) and (max-width: 1600px) {
+    font-size: calc(100vw / 1400 * 10);
   }
 
   @media all and (min-width: 1601px) {

@@ -1,0 +1,48 @@
+.container {
+  display: inline-block;
+  padding: 1.4rem 5rem;
+  color: white;
+  background-color: #E88D06;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  box-shadow: 0 .4rem .4rem rgba(0, 0, 0, 0.25);
+  transition: all 200ms ease-in;
+
+  &:hover {
+    background-color: #c37306;
+  }
+}
+
+.withIcon {
+  svg {
+    margin-bottom: -0.5rem;
+    margin-left: 2rem;
+    color: inherit;
+  }
+}
+
+.inline {
+  background: rgba(0,0,0,0);
+  border: solid 1px #E88D06;
+  color: #E88D06;
+  padding: 1rem 3.5rem;
+  box-shadow: none;
+  font-size: 1.8rem;
+
+  &:hover {
+    color: white;
+    background: #E88D06;
+  }
+}
+
+.light {
+  box-shadow: none;
+  padding: 0;
+  background: rgba(0,0,0,0);
+  font-size: 1.8rem;
+
+  &:hover {
+    color: white;
+    background-color: rgba(0,0,0,0);
+  }
+}
