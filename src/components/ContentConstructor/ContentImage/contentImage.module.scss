@@ -1,0 +1,25 @@
+.isLarge {
+  width: 100%;
+
+  .title {
+    font-size: 1.8rem;
+    text-align: right;
+  }
+
+  img {
+    margin-bottom: 1rem;
+  }
+}
+
+.isSmall {
+  width: 100%;
+
+  .title {
+    font-size: 1.4rem;
+    text-align: right;
+  }
+
+  img {
+    margin-bottom: 1rem;
+  }
+}

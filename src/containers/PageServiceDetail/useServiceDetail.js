@@ -8,7 +8,8 @@ const useServiceDetail = () => {
 
   const {
     response: {
-      banner
+      banner,
+      content
     } = {}
   } = useRemoteData(FETCH_SERVICES({ slug, isSingle: true }))
 
@@ -19,7 +20,8 @@ const useServiceDetail = () => {
 
   return {
     helmetData,
-    banner
+    banner,
+    content
   }
 }
 

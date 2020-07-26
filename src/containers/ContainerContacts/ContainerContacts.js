@@ -7,9 +7,12 @@ import { FaVk, FaInstagram } from 'react-icons/fa'
 import useDevice from 'hooks/useDevice'
 import Layout from 'components/Layout/Layout'
 import MapYandex from 'components/MapYandex/MapYandex'
+import useContainerContacts from 'containers/ContainerContacts/useContainerContacts'
 
-const ContainerContacts = ({ items, vk, mail }) => {
+const ContainerContacts = () => {
   const { currentDevice } = useDevice()
+  const { items, vk, email } = useContainerContacts()
+
   return (
     <div className={css[currentDevice]}>
       <Layout className={css.wrapper}>
@@ -30,7 +33,7 @@ const ContainerContacts = ({ items, vk, mail }) => {
             }
             <li className={css.social}>
               <a href={vk}><FaVk size='3rem' /></a>
-              <a href={`mailto:${mail}`}><MdMail size='3rem' /></a>
+              <a href={`mailto:${email}`}><MdMail size='3rem' /></a>
               <a><FaInstagram size='3rem' /></a>
             </li>
           </ul>

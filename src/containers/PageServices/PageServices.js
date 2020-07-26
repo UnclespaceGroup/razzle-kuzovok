@@ -9,16 +9,19 @@ import SectionTitle from 'components/SectionTitle/SectionTitle'
 import RowCards from 'components/RowCards/RowCards'
 import CardCatalogImage from 'components/CardCatalogImage/CardCatalogImage'
 import ContainerContacts from 'containers/ContainerContacts/ContainerContacts'
+import useDevice from 'hooks/useDevice'
 
 const PageServices = () => {
   const { mainCards, helmetData, cards, bannerData } = useServices()
+  const { currentDevice } = useDevice()
+
   return (
-    <>
+    <div className={css[currentDevice]}>
       <HelmetComponent {...helmetData} />
       <Banner
         {...bannerData}
       />
-      <Tabs />
+      <Tabs className={css.tabs} />
       <Layout>
         <SectionTitle title='Основные услуги' count={mainCards?.length} />
         <div className={css.main}>
@@ -39,7 +42,7 @@ const PageServices = () => {
       <div className={css.bottom}>
         <ContainerContacts />
       </div>
-    </>
+    </div>
   )
 }
 

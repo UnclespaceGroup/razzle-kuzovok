@@ -7,10 +7,10 @@ import { NavLink } from 'react-router-dom'
 import Layout from 'components/Layout/Layout'
 import useDevice from 'hooks/useDevice'
 
-const Tabs = ({ items = [], pending }) => {
+const Tabs = ({ items = [], pending, className }) => {
   const { currentDevice } = useDevice()
   return (
-    <div className={cn(css[currentDevice], { [css.pending]: pending })}>
+    <div className={cn(css[currentDevice], className, { [css.pending]: pending })}>
       <Layout className={css.wrapper}>
         {
           _.map(items, (item, key) => (
@@ -32,7 +32,8 @@ const Tabs = ({ items = [], pending }) => {
 }
 Tabs.propTypes = {
   items: PropTypes.array,
-  pending: PropTypes.bool
+  pending: PropTypes.bool,
+  className: PropTypes.string
 }
 
 export default React.memo(Tabs)
