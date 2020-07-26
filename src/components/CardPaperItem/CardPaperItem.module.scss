@@ -1,0 +1,106 @@
+.isLarge {
+  padding: 2rem 0;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+  }
+
+  .title {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    color: #000000;
+    margin-bottom: 2.4rem;
+  }
+
+  .text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #323232;
+    margin-bottom: 2rem;
+  }
+
+  .date {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #000000;
+    margin-bottom: 1.2rem;
+  }
+
+  .actor {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #000000;
+    margin-bottom: 2.4rem;
+  }
+
+  .side {
+    width: 42rem;
+  }
+
+  .img {
+    height: 25rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.isSmall {
+  padding: 2.4rem 0;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+
+  .title {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    color: #000000;
+    margin-bottom: 1.6rem;
+  }
+
+  .text {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: #323232;
+    margin-bottom: 2.4rem;
+  }
+
+  .date {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #000000;
+    margin-bottom: .4rem;
+  }
+
+  .actor {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #000000;
+    margin-bottom: 2.4rem;
+  }
+
+  .side {
+    width: 42rem;
+  }
+
+  .img {
+    height: 22rem;
+    margin: 0 -2rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+}
