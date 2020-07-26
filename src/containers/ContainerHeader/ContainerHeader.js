@@ -7,7 +7,7 @@ import Collapse from 'react-collapse'
 import { useLocation, withRouter } from 'react-router'
 import { useRemoteData } from '@aic/react-remote-data-provider'
 import FETCH_CONTACTS from 'api/fetch/FETCH_CONTACTS'
-import { menu, menuItems } from 'containers/ContainerHeader/links'
+import { menu, menuItems } from 'constants/links'
 
 const ContainerHeader = () => {
   const [open, setOpen] = useState(false)

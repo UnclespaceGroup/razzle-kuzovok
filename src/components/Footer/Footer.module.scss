@@ -1,0 +1,185 @@
+.isLarge {
+
+  &.container {
+    margin-top: 12rem;
+    position: relative;
+    padding: 10rem 0 5rem;
+    background-size: cover;
+    background-color: #282828;
+  }
+
+  hr {
+    border-top: none;
+    border-color: #767676;
+  }
+
+
+  .wrapper {
+    position: relative;
+    z-index: 10;
+
+    li {
+      margin-top: 2.4rem;
+    }
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .column {
+    width: 50%;
+  }
+
+  .mainLink {
+    display: block;
+    color: white;
+    font-size: 2rem;
+    transition: all 200ms ease-in;
+    text-align: right;
+    padding-right: 4rem;
+    margin-bottom: 4.8rem;
+
+    &:hover {
+      color: #c37306;
+    }
+  }
+
+  .link {
+    text-align: left;
+    font-weight: 300;
+    padding-right: 0;
+    padding-left: 4rem;
+  }
+
+  .logo {
+    height: 20rem;
+    background: no-repeat center;
+    background-size: contain;
+    margin-bottom: 4.8rem;
+  }
+
+  .contacts {
+    margin-top: 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .phone {
+    margin-top: 1rem;
+    font-size: 2.8rem;
+    line-height: 4.2rem;
+    color: #E5E5E5;
+  }
+
+  .addr {
+    font-size: 2rem;
+    color: white;
+    font-weight: 300;
+    display: flex;
+
+    svg {
+      margin-right: 1rem;
+    }
+  }
+
+  &.unclespace {
+    padding: 2rem 0;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: white;
+    background-color: #303030;
+  }
+}
+
+.isSmall {
+  margin-top: 4.8rem;
+  position: relative;
+  padding: 5rem 0 2rem;
+  background: no-repeat center;
+  background-size: cover;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 10;
+
+    li {
+      margin-top: 2rem;
+    }
+  }
+
+  .block {
+    border-bottom: solid 1px #E5E5E5;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .mainLink {
+    display: block;
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .link {
+    font-weight: 300;
+  }
+
+  .logo {
+    height: 10rem;
+    background: no-repeat center;
+    background-size: contain;
+    margin-bottom: 4.8rem;
+  }
+
+  .phone {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 2.2rem;
+    line-height: 4.2rem;
+    color: #E5E5E5;
+    margin-bottom: 2rem;
+  }
+
+  .addr {
+    font-size: 1.4rem;
+    color: white;
+    font-weight: 300;
+    white-space: nowrap;
+    display: flex;
+
+    svg {
+      margin-right: 1rem;
+    }
+  }
+
+  &.unclespace {
+    padding: 2rem 0;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: center;
+    color: white;
+    background-color: #303030;
+
+    &:before {
+      display: none;
+    }
+  }
+
+
+}

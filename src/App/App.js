@@ -1,12 +1,14 @@
 import React from 'react'
 import 'styles/index.scss'
 import Routes from 'containers/Routes'
-import ContainerMainMenuDesktop from 'containers/ContainerHeader/ContainerHeader'
+import ContainerHeader from 'containers/ContainerHeader/ContainerHeader'
+import ContainerFooter from 'containers/ContainerFooter/ContainerFooter'
 
 const App = () => (
   <>
-    <ContainerMainMenuDesktop />
+    <ContainerHeader />
     <Routes />
+    <ContainerFooter />
   </>
 )
 
