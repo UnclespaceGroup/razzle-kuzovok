@@ -4,17 +4,18 @@ import cn from 'classnames'
 import PropTypes from 'prop-types'
 import css from 'components/RowCards/RowCards.module.scss'
 import useDevice from 'hooks/useDevice'
+import Layout from 'components/Layout/Layout'
 
 const RowCards = ({ children, items, className }) => {
   const { currentDevice } = useDevice()
   return (
-    <div className={cn(css[currentDevice], className)}>
+    <Layout className={cn(css[currentDevice], className)}>
       {
         _.map(items, (item, key) => (
           React.cloneElement(children, { key: key, className: css.item, ...item })
         ))
       }
-    </div>
+    </Layout>
   )
 }
 RowCards.propTypes = {

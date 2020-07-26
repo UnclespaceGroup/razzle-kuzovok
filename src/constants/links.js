@@ -1,4 +1,4 @@
-import { PAGE_ABOUT, PAGE_PAPER, PAGE_REVIEWS, PAGE_SERVICES, PAGE_WORKS } from 'constants/routes'
+import { PAGE_ABOUT, PAGE_PAPER, PAGE_REVIEWS, PAGE_SERVICES, PAGE_CARS } from 'constants/routes'
 
 export const menuItems = [
   {
@@ -8,7 +8,7 @@ export const menuItems = [
     title: 'Лента работ', href: PAGE_REVIEWS
   },
   {
-    title: 'Автомобили в ремонте', href: PAGE_WORKS
+    title: 'Автомобили в ремонте', href: PAGE_CARS
   },
   {
     title: 'Статьи', href: PAGE_PAPER
@@ -25,7 +25,7 @@ export const menu = {
       title: 'Услуги'
     },
     {
-      to: PAGE_WORKS,
+      to: PAGE_CARS,
       title: 'Работы'
     },
     {

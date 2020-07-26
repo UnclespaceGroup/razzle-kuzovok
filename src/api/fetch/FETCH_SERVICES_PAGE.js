@@ -1,7 +1,7 @@
 import { axiosAPI } from 'api/axios'
 import { getImgName } from 'utils/getImgName'
 
-const FETCH_WORK_PAGE = {
+const FETCH_SERVICES_PAGE = {
   axiosInstance: axiosAPI,
   request: {
     url: 'services-page'
@@ -26,4 +26,4 @@ const FETCH_WORK_PAGE = {
     }
   }
 }
-export default FETCH_WORK_PAGE
+export default FETCH_SERVICES_PAGE

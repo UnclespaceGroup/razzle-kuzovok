@@ -3,7 +3,7 @@ import FETCH_SERVICES from 'api/fetch/FETCH_SERVICES'
 import _ from 'lodash'
 import React from 'react'
 import { PAGE_SERVICES } from 'constants/routes'
-import FETCH_WORK_PAGE from 'api/fetch/FETCH_WORK_PAGE'
+import FETCH_SERVICES_PAGE from 'api/fetch/FETCH_SERVICES_PAGE'
 
 const useServices = () => {
   const {
@@ -14,7 +14,7 @@ const useServices = () => {
 
   const {
     response: bannerData
-  } = useRemoteData(FETCH_WORK_PAGE)
+  } = useRemoteData(FETCH_SERVICES_PAGE)
 
   const helmetData = {
     title: 'Каталог услуг | Станция кузовного ремонта Кузовок',
