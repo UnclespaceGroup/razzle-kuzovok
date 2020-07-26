@@ -1,0 +1,27 @@
+.isLarge {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  .item {
+    width: 30% !important;
+
+    &:not(:nth-child(3n)) {
+      margin-right: 5%;
+    }
+
+    &:nth-child(n + 4) {
+      margin-top: 5rem;
+    }
+  }
+}
+
+.isSmall {
+  width: 100%;
+
+  .item {
+    margin-bottom: 2.4rem;
+  }
+
+}
+

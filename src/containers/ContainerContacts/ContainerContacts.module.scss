@@ -1,0 +1,187 @@
+.isLarge {
+  border-top: solid 1px rgba(0, 0, 0, 0.2);
+  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+  padding: 5rem 0;
+
+
+  li {
+    margin-bottom: 2.8rem;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    display: flex;
+    //align-items: center;
+  }
+
+  a {
+    color: black;
+  }
+
+
+  .social {
+
+    a {
+      color: #2a2a2f;
+      margin-right: 2rem;
+
+      &:hover {
+        color: #c37306;
+      }
+    }
+  }
+
+  .wrapper {
+    display: flex;
+  }
+
+  .map {
+    width: 60%;
+    height: 40rem;
+  }
+
+  .content {
+    padding: 4rem 4rem;
+  }
+
+  .title {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+
+    &:after {
+      display: block;
+      content: '';
+      background-color: #E88D06;
+      height: 2px;
+      width: 20rem;
+      margin-top: 1rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .address {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+
+    a {
+      display: inline-block;
+      font-weight: 500;
+      border-bottom: solid 1px;
+
+      &:hover {
+        color: #c37306;
+      }
+    }
+
+    svg {
+      margin-right: 2rem;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  .phone {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+  }
+
+  .days {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+  }
+
+  .status {
+    color: #c37306;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+  }
+}
+
+.isSmall {
+  border-top: solid 1px rgba(0, 0, 0, 0.2);
+  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+  padding: 5rem 0;
+
+
+  li {
+    margin-bottom: 2.8rem;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    display: flex;
+    //align-items: center;
+  }
+
+  a {
+    color: black;
+  }
+
+  .social {
+
+    a {
+      color: #2a2a2f;
+      margin-right: 2rem;
+
+      &:hover {
+        color: #c37306;
+      }
+    }
+  }
+
+  .map {
+    margin: 0 -2rem;
+    height: 20rem;
+    margin-bottom: 4rem;
+  }
+
+
+  .title {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+
+    &:after {
+      display: block;
+      content: '';
+      background-color: #E88D06;
+      height: 1px;
+      width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .address {
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+
+    a {
+      display: inline-block;
+      font-weight: 500;
+      border-bottom: solid 1px;
+
+      &:hover {
+        color: #c37306;
+      }
+    }
+
+    svg {
+      margin-right: 2rem;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  .phone {
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+  }
+
+  .days {
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+  }
+
+  .status {
+    color: #c37306;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+  }
+
+}

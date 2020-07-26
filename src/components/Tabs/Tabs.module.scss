@@ -1,0 +1,55 @@
+.isLarge {
+  background-color: #272727;
+  min-height: 6rem;
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .item {
+    font-size: 1.6rem;
+    color: white;
+    height: 100%;
+    padding: 2rem 4rem;
+
+    &__active {
+      background-color: #4d4d4d;
+    }
+  }
+}
+
+.isSmall {
+  width: 100%;
+  background-color: #272727;
+  padding: 0 2rem;
+  overflow: auto;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .item {
+    min-width: 12rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    padding: 0 2rem;
+    color: white;
+    width: auto;
+
+    &__active {
+      background-color: #4d4d4d;
+    }
+  }
+}
+
+.pending {
+  pointer-events: none;
+}
+

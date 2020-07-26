@@ -1,5 +1,6 @@
 export const PAGE_HOME = '/'
 export const PAGE_SERVICES = '/services/'
+export const PAGE_SERVICES_DETAIL = '/services/:slug'
 export const PAGE_WORKS = '/works/'
 export const PAGE_WORK_DETAIL = '/works-detail/'
 
