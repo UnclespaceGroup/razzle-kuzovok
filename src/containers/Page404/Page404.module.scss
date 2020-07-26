@@ -3,11 +3,11 @@
 
   .header {
     background-color: rgba(0,0,0,0.8);
-    margin-bottom: 8rem;
+    margin-bottom: 2.4rem;
     font-size: 16rem;
     color: white;
     font-weight: bold;
-    padding: 12rem 0 6rem;
+    padding: 12rem 0 0;
   }
 
   .logo {
@@ -24,6 +24,24 @@
 
 .isSmall {
   margin: 0 0 20rem;
+  .header {
+    padding: 12rem 0 4rem;
+    font-size: 10rem;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.8);
+    margin-bottom: 4rem;
+  }
+
+  .logo {
+    display: block;
+    background-size: contain;
+    height: 20rem;
+  }
+
+  .text {
+    font-size: 2.2rem;
+  }
 
   h1 {
     font-size: 3.2rem;
@@ -31,24 +49,7 @@
   }
 }
 
-.header {
-  padding: 12rem 0 4rem;
-  font-size: 10rem;
-  color: white;
-  font-weight: bold;
-  background-color: rgba(0,0,0,0.8);
-  margin-bottom: 4rem;
-}
 
-.logo {
-  display: block;
-  background-size: contain;
-  height: 20rem;
-}
-
-.text {
-  font-size: 2.2rem;
-}
 
 
 

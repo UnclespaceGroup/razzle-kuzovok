@@ -3,8 +3,9 @@ import _ from 'lodash'
 import { getImgName } from 'utils/getImgName'
 import { PAGE_CARS } from 'constants/routes'
 
-const FETCH_CARS = ({ slug } = {}) => ({
+const FETCH_CARS_DETAIL = ({ slug } = {}) => ({
   axiosInstance: axiosAPI,
+  disabled: !slug,
   request: {
     url: 'cars',
     params: {
@@ -19,19 +20,21 @@ const FETCH_CARS = ({ slug } = {}) => ({
         slug,
         text,
         content,
-        img
+        img,
+        works
       }) => ({
-        title,
-        text,
+        banner: {
+          title,
+          text,
+          img: getImgName(img)
+        },
         content,
         to: PAGE_CARS + slug,
-        img: getImgName(img)
+        works
       }))
 
-      return {
-        items
-      }
+      return items[0]
     }
   }
 })
-export default FETCH_CARS
+export default FETCH_CARS_DETAIL

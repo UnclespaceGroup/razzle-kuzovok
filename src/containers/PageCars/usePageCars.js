@@ -7,7 +7,7 @@ const usePageCars = () => {
     response: {
       items
     } = {}
-  } = useRemoteData(FETCH_CARS)
+  } = useRemoteData(FETCH_CARS())
 
   const {
     response: banner
