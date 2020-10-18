@@ -1,6 +1,7 @@
 import { axiosAPI } from 'api/axios'
 import _ from 'lodash'
 import { getImgName } from 'utils/getImgName'
+import { getDate } from 'utils/getNameByValue'
 
 const FETCH_REVIEWS = () => {
   return {
@@ -19,11 +20,13 @@ const FETCH_REVIEWS = () => {
             title: carName,
             text
           } = {},
+          created_at: date,
           ...item
         }) => ({
           ...item,
           title: `${carName} - ${title}`,
-          img: getImgName(img)
+          img: getImgName(img),
+          date: getDate(date)
         }))
       }
     }

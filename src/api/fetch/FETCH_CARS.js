@@ -2,6 +2,7 @@ import { axiosAPI } from 'api/axios'
 import _ from 'lodash'
 import { getImgName } from 'utils/getImgName'
 import { PAGE_CARS } from 'constants/routes'
+import { getDate } from 'utils/getNameByValue'
 
 const FETCH_CARS = ({ slug } = {}) => ({
   axiosInstance: axiosAPI,
@@ -14,12 +15,13 @@ const FETCH_CARS = ({ slug } = {}) => ({
   requestFunctions: {
     transformResponse: data => {
       const parsedData = JSON.parse(data)
-      const items = _.map(parsedData, ({
+      return _.map(parsedData, ({
         title,
         slug,
         text,
         content,
         img,
+        created_at: date,
         ...other
       }) => ({
         title,
@@ -27,10 +29,9 @@ const FETCH_CARS = ({ slug } = {}) => ({
         content,
         to: PAGE_CARS + slug,
         img: getImgName(img),
+        date: getDate(date),
         ...other
       }))
-
-      return items
     }
   }
 })

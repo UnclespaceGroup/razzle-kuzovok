@@ -29,6 +29,10 @@ export const menu = {
       title: 'Работы'
     },
     {
+      title: 'Последнее',
+      to: PAGE_REVIEWS
+    },
+    {
       to: PAGE_ABOUT,
       title: 'О нас'
     },

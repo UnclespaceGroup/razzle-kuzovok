@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cn from 'classnames'
 import css from 'components/CardCar/CardCar.module.scss'
 import { Link } from 'react-router-dom'
-import { getDate, getStatusByCode } from 'utils/getNameByValue'
+import { getStatusByCode } from 'utils/getNameByValue'
 import useDevice from 'hooks/useDevice'
 
 const CardCar = ({ to = '/', img, title, text, className, ready, date }) => {
@@ -20,7 +20,7 @@ const CardCar = ({ to = '/', img, title, text, className, ready, date }) => {
 
       </div>
       <div className={css.footer}>
-        <div className={css.date}>{getDate(date)}</div>
+        <div className={css.date}>{date}</div>
         <div className={css.link}>Подробнее</div>
       </div>
     </Link>

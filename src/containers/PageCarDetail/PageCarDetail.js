@@ -6,15 +6,16 @@ import usePageCarDetail from 'containers/PageCarDetail/usePageCarDetail'
 import { PAGE_CARS } from 'constants/routes'
 import Tabs from 'components/Tabs/Tabs'
 import ContentConstructor from 'components/ContentConstructor/ContentConstructor'
-import SectionTitle from 'components/SectionTitle/SectionTitle'
 import Layout from 'components/Layout/Layout'
 import HelmetComponent from 'components/HelmetComponent/ContainerHelmet'
+import css from './pageCarDetail.module.scss'
+import useDevice from 'hooks/useDevice'
 
 const PageCarDetail = () => {
   const { banner, content, works, meta } = usePageCarDetail()
-
+  const { currentDevice } = useDevice()
   return (
-    <div>
+    <div className={css[currentDevice]}>
       <HelmetComponent {...meta} />
       <Banner backLink={PAGE_CARS} {...banner} />
       <Tabs />
@@ -22,9 +23,10 @@ const PageCarDetail = () => {
         <div>
           {content && <ContentConstructor content={content} />}
           {
-            _.map(works, ({ title, content: workContent }, key) => (
+            _.map(works, ({ title, content: workContent, date }, key) => (
               <div key={key}>
-                <SectionTitle title={title} />
+                <h2 className={css.title}>{title}</h2>
+                <div className={css.date}>{date}</div>
                 <ContentConstructor content={workContent} />
               </div>
             ))

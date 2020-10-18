@@ -2,6 +2,7 @@ import { axiosAPI } from 'api/axios'
 import _ from 'lodash'
 import { getImgName } from 'utils/getImgName'
 import { PAGE_CARS } from 'constants/routes'
+import { getDate } from 'utils/getNameByValue'
 
 const FETCH_CARS_DETAIL = ({ slug } = {}) => ({
   axiosInstance: axiosAPI,
@@ -30,7 +31,10 @@ const FETCH_CARS_DETAIL = ({ slug } = {}) => ({
         },
         content,
         to: PAGE_CARS + slug,
-        works
+        works: _.map(works, item => ({
+          ...item,
+          date: getDate(item.created_at)
+        }))
       }))
 
       return items[0]

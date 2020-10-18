@@ -1,7 +1,6 @@
 // packages
 import React from 'react'
 import cn from 'classnames'
-import PropTypes from 'prop-types'
 import css from './cardReview.module.scss'
 import ContentConstructor from 'components/ContentConstructor/ContentConstructor'
 import Layout from 'components/Layout/Layout'
@@ -9,7 +8,7 @@ import { useToggle } from 'react-use'
 import Button from 'components/Button/Button'
 import useDevice from 'hooks/useDevice'
 
-const CardReview = ({ className, title, content }) => {
+const CardReview = ({ date, title, content }) => {
   const { currentDevice } = useDevice()
   const [isOpen, setOpen] = useToggle(false)
 
@@ -18,6 +17,7 @@ const CardReview = ({ className, title, content }) => {
       <Layout withAside>
         <div>
           <h3 className={css.title}>{title}</h3>
+          <div className={css.date}>{date}</div>
           <ContentConstructor content={content} />
         </div>
       </Layout>
@@ -38,8 +38,5 @@ const CardReview = ({ className, title, content }) => {
       </footer>
     </div>
   )
-}
-CardReview.propTypes = {
-  className: PropTypes.string
 }
 export default React.memo(CardReview)
