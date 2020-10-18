@@ -6,16 +6,25 @@ const usePageCarDetail = () => {
   const { slug } = useParams()
   const {
     response: {
+      banner: {
+        title,
+        text
+      } = {},
       banner,
       content,
       works
     } = {}
   } = useRemoteData(FETCH_CARS_DETAIL({ slug }))
 
+  const meta = {
+    title: `Кузовок - ${title || ''} ${text?.toLowerCase() || 'обслуживание автомобиля'}`
+  }
+
   return {
     content,
     banner,
-    works
+    works,
+    meta
   }
 }
 export default usePageCarDetail

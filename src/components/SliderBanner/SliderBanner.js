@@ -6,8 +6,8 @@ import BgImage from 'components/BgImage/BgImage'
 import Button from 'components/Button/Button'
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa'
 import Layout from 'components/Layout/Layout'
-import IconPopapDesktop from 'components/IconPopap/IconPopap'
 import useDevice from 'hooks/useDevice'
+import ContactsPopap from 'components/ContactsPopap/ContactsPopap'
 
 const SliderBanner = ({ items, className }) => {
   const swiperRef = useRef(null)
@@ -17,7 +17,7 @@ const SliderBanner = ({ items, className }) => {
     <div className={cn(css[currentDevice], className)}>
       <Slider
         getSwiper={ref => { swiperRef.current = ref }}
-        effect={'fade'}
+        effect='fade'
         items={items}
         loop
         autoplayDelay={10000}
@@ -28,10 +28,12 @@ const SliderBanner = ({ items, className }) => {
         (items?.length > 1) && isLarge &&
         <div className={css.btns}>
           <Layout className={css.wrapper}>
-            <div className={css.prev}><FaArrowLeft size={'3rem'}
+            <div className={css.prev}><FaArrowLeft
+              size='3rem'
               onClick={() => swiperRef.current?.slidePrev()}
             /></div>
-            <div className={css.next}><FaArrowRight size={'3rem'}
+            <div className={css.next}><FaArrowRight
+              size='3rem'
               onClick={() => swiperRef.current?.slideNext()}
             /></div>
           </Layout>
@@ -39,7 +41,7 @@ const SliderBanner = ({ items, className }) => {
       }
       {isLarge &&
       <Layout className={css.popapWrapper}>
-        <IconPopapDesktop className={css.popap} />
+        <ContactsPopap className={css.popap} />
       </Layout>}
     </div>
   )
@@ -59,7 +61,7 @@ const Slide = ({ img = '', title, text, url, onClick }) => (
         </div>}
       </Layout>
     </div>
-    <div id={'toThis'} />
+    <div id='toThis' />
   </BgImage>
 )
 

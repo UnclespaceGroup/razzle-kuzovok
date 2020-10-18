@@ -46,3 +46,12 @@
     background-color: rgba(0,0,0,0);
   }
 }
+
+.black {
+  background: rgb(60, 60, 60);
+  color: white;
+
+  &:hover {
+    background-color: rgb(33, 33, 33);
+  }
+}

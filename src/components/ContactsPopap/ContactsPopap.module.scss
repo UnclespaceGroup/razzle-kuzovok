@@ -2,7 +2,9 @@
   position: relative;
   z-index: 100;
 
-
+  a:hover {
+    color: #E88D06;
+  }
 }
 
 .modal {
@@ -31,6 +33,11 @@
   }
 }
 
+.title {
+  font-size: 2rem;
+  color: black;
+}
+
 .close {
   position: absolute;
   top: 1rem;
@@ -56,10 +63,6 @@
     width: 2rem;
     height: 2rem;
     margin-bottom: -.5rem;
-  }
-
-  &:hover {
-    color: #E88D06;
   }
 }
 

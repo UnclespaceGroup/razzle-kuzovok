@@ -19,18 +19,18 @@ const FETCH_CARS = ({ slug } = {}) => ({
         slug,
         text,
         content,
-        img
+        img,
+        ...other
       }) => ({
         title,
         text,
         content,
         to: PAGE_CARS + slug,
-        img: getImgName(img)
+        img: getImgName(img),
+        ...other
       }))
 
-      return {
-        items
-      }
+      return items
     }
   }
 })

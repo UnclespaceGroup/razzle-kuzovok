@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import css from 'components/IconPopap/IconPopap.module.scss'
+import css from './ContactsPopap.module.scss'
 import cn from 'classnames'
 import { MdMessage, MdPhone, MdClose } from 'react-icons/md'
 import { FaVk } from 'react-icons/fa'
 import { useRemoteData } from '@aic/react-remote-data-provider'
 import FETCH_CONTACTS from 'api/fetch/FETCH_CONTACTS'
 
-const IconPopap = ({ className }) => {
+const ContactsPopap = ({ className }) => {
   const [isOpen, setIsOpen] = useState()
   const {
     response: {
@@ -22,7 +22,7 @@ const IconPopap = ({ className }) => {
       <div className={css.wrapper}>
         {
           isOpen && <div className={css.modal}>
-            <div className={css.item}><h3>Свяжитесь с нами</h3></div>
+            <h3 className={css.title}>Свяжитесь с нами</h3>
             <div className={css.item}><MdPhone /><div>{phone}</div></div>
             {vk && <div className={css.item}><FaVk />{vk}</div>}
             {email && <div className={css.item}><MdMessage />{email}</div>}
@@ -36,7 +36,7 @@ const IconPopap = ({ className }) => {
     </div>
   )
 }
-IconPopap.propTypes = {
+ContactsPopap.propTypes = {
   className: PropTypes.string
 }
-export default React.memo(IconPopap)
+export default React.memo(ContactsPopap)

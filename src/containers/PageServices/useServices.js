@@ -13,16 +13,11 @@ const useServices = () => {
   } = useRemoteData(FETCH_SERVICES())
 
   const {
-    response: bannerData
+    response: {
+      banner,
+      meta
+    } = {}
   } = useRemoteData(FETCH_SERVICES_PAGE)
-
-  const helmetData = {
-    title: 'Каталог услуг | Станция кузовного ремонта Кузовок',
-    description: `
-Станция предлагаем огромный спектр услуг по кузовному ремонту и кузовной обработке автомобиля,
-такие как ${_.map(items, item => item.title).join(', ')}
-    `
-  }
 
   const _cards = React.useMemo(() =>
     _.map(items, ({ banner, isMain, slug }) => console.log(slug) || ({
@@ -41,9 +36,9 @@ const useServices = () => {
   [_cards])
 
   return {
-    helmetData,
+    meta,
     mainCards,
-    bannerData,
+    banner,
     cards
   }
 }

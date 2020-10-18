@@ -1,10 +1,10 @@
 import { axiosAPI } from 'api/axios'
 import { getImgName } from 'utils/getImgName'
 
-const FETCH_CARS_PAGE = {
+const FETCH_REVIEWS_PAGE = {
   axiosInstance: axiosAPI,
   request: {
-    url: 'cars-page'
+    url: 'reviews-page'
   },
   requestFunctions: {
     transformResponse: data => {
@@ -15,8 +15,8 @@ const FETCH_CARS_PAGE = {
           title,
           text,
           img
-        },
-        ...otherData
+        } = {},
+        ...other
       } = parsedData
 
       return {
@@ -25,9 +25,9 @@ const FETCH_CARS_PAGE = {
           text,
           img: getImgName(img)
         },
-        ...otherData
+        ...other
       }
     }
   }
 }
-export default FETCH_CARS_PAGE
+export default FETCH_REVIEWS_PAGE

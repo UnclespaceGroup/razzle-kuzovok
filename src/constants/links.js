@@ -5,7 +5,7 @@ export const menuItems = [
     title: 'Услуги станции', href: PAGE_SERVICES
   },
   {
-    title: 'Лента работ', href: PAGE_REVIEWS
+    title: 'Последние работы', href: PAGE_REVIEWS
   },
   {
     title: 'Автомобили в ремонте', href: PAGE_CARS

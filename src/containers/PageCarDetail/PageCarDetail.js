@@ -8,12 +8,14 @@ import Tabs from 'components/Tabs/Tabs'
 import ContentConstructor from 'components/ContentConstructor/ContentConstructor'
 import SectionTitle from 'components/SectionTitle/SectionTitle'
 import Layout from 'components/Layout/Layout'
+import HelmetComponent from 'components/HelmetComponent/ContainerHelmet'
 
 const PageCarDetail = () => {
-  const { banner, content, works } = usePageCarDetail()
+  const { banner, content, works, meta } = usePageCarDetail()
 
   return (
     <div>
+      <HelmetComponent {...meta} />
       <Banner backLink={PAGE_CARS} {...banner} />
       <Tabs />
       <Layout withAside>

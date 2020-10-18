@@ -1,21 +1,19 @@
 import { useRemoteData } from '@aic/react-remote-data-provider'
 import FETCH_CARS from 'api/fetch/FETCH_CARS'
-import FETCH_SERVICES_PAGE from 'api/fetch/FETCH_SERVICES_PAGE'
+import FETCH_CARS_PAGE from 'api/fetch/FETCH_CARS_PAGE'
 
 const usePageCars = () => {
   const {
-    response: {
-      items
-    } = {}
+    response: items
   } = useRemoteData(FETCH_CARS())
 
   const {
-    response: banner
-  } = useRemoteData(FETCH_SERVICES_PAGE)
+    response
+  } = useRemoteData(FETCH_CARS_PAGE)
 
   return {
     items,
-    banner
+    ...response
   }
 }
 export default usePageCars

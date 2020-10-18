@@ -9,8 +9,8 @@ import { MdArrowBack } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 import Button from 'components/Button/Button'
 import { scrollWindowTo } from 'utils/scrollWindowTo'
-import IconPopap from 'components/IconPopap/IconPopap'
 import useDevice from 'hooks/useDevice'
+import ContactsPopap from 'components/ContactsPopap/ContactsPopap'
 
 const Banner = ({ title, text, img, icon, backLink, beforeTitleBlock }) => {
   const { currentDevice, isLarge } = useDevice()
@@ -38,7 +38,7 @@ const Banner = ({ title, text, img, icon, backLink, beforeTitleBlock }) => {
               </div>
             </div>
           </div>
-          {isLarge && <IconPopap className={css.popap} />}
+          {isLarge && <ContactsPopap className={css.popap} />}
         </Layout>
       </div>
       <div id='toThis' />

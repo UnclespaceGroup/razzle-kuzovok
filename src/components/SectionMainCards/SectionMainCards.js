@@ -9,17 +9,19 @@ import useDevice from 'hooks/useDevice'
 const SectionMainCards = ({ cards }) => {
   const { currentDevice } = useDevice()
   return (
-    <Layout className={css[currentDevice]}>
-      {
-        _.map(cards, (card, key) => (
-          <BgImage key={key} img={card.img} className={css.card}>
-            <div className={css.wrapper}>
-              <div className={css.title}>{card.title}</div>
-              <div className={css.text}>{card.text}</div>
-            </div>
-          </BgImage>
-        ))
-      }
+    <Layout>
+      <ul className={css[currentDevice]}>
+        {
+          _.map(cards, (card, key) => (
+            <BgImage key={key} img={card.img} className={css.card} Tag='li'>
+              <div className={css.wrapper}>
+                <div className={css.title}>{card.title}</div>
+                <div className={css.text}>{card.text}</div>
+              </div>
+            </BgImage>
+          ))
+        }
+      </ul>
     </Layout>
   )
 }

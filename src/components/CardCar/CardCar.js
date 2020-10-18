@@ -6,10 +6,12 @@ import { Link } from 'react-router-dom'
 import { getDate, getStatusByCode } from 'utils/getNameByValue'
 import useDevice from 'hooks/useDevice'
 
-const CardCar = ({ to = '/', img, title, text, className, status = 0, date }) => {
+const CardCar = ({ to = '/', img, title, text, className, ready, date }) => {
   const { currentDevice } = useDevice()
+  const status = ready ? 1 : 0
+
   return (
-    <div className={cn(css[currentDevice], className)}>
+    <Link to={to} className={cn(css[currentDevice], className)}>
       <div>
         <div className={css.img} style={{ backgroundImage: `url("${img}")` }} />
         <div className={cn(css.subtitle, css[`status-${status}`])} dangerouslySetInnerHTML={{ __html: getStatusByCode(status) }} />
@@ -19,9 +21,9 @@ const CardCar = ({ to = '/', img, title, text, className, status = 0, date }) =>
       </div>
       <div className={css.footer}>
         <div className={css.date}>{getDate(date)}</div>
-        <Link className={css.link} to={to} >Подробнее</Link>
+        <div className={css.link}>Подробнее</div>
       </div>
-    </div>
+    </Link>
   )
 }
 CardCar.propTypes = {

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import _ from 'lodash'
 import ContentText from 'components/ContentConstructor/ContentText/ContentText'
 import ContentImage from 'components/ContentConstructor/ContentImage/ContentImage'
@@ -24,5 +25,8 @@ const ContentConstructor = ({ content }) => {
     <div>
       {_.map(content, getContentByType)}
     </div>)
+}
+ContentConstructor.propTypes = {
+  content: PropTypes.array
 }
 export default React.memo(ContentConstructor)

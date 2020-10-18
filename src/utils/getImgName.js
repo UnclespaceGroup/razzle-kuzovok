@@ -1,1 +1,1 @@
-export const getImgName = ({ url } = {}) => url && process.env.RAZZLE_API_URL + url
+export const getImgName = (img) => img && process.env.RAZZLE_API_URL + img?.url

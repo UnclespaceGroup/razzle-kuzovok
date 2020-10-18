@@ -7,7 +7,7 @@ import {
   PAGE_CARS,
   PAGE_CAR_DETAIL,
   PAGE_ABOUT,
-  PAGE_ARTICLE, PAGE_ARTICLE_DETAIL
+  PAGE_ARTICLE, PAGE_ARTICLE_DETAIL, PAGE_REVIEWS
 } from 'constants/routes'
 import PageServices from 'containers/PageServices/PageServices'
 import PageServiceDetail from 'containers/PageServiceDetail/PageServiceDetail'
@@ -17,6 +17,7 @@ import PageCarDetail from 'containers/PageCarDetail/PageCarDetail'
 import PageAbout from 'containers/PageAbout/PageAbout'
 import PageArticle from 'containers/PageArticle/PageArticle'
 import PageArticleDetail from 'containers/PageArticleDetail/PageArticleDetail'
+import PageReviews from 'containers/PageReviews/PageReviews'
 
 const Routes = () => (
   <Switch>
@@ -25,6 +26,7 @@ const Routes = () => (
     <Route exact path={PAGE_SERVICES_DETAIL} component={PageServiceDetail} />
     <Route exact path={PAGE_CARS} component={PageCars} />
     <Route exact path={PAGE_CAR_DETAIL} component={PageCarDetail} />
+    <Route exact path={PAGE_REVIEWS} component={PageReviews} />
     <Route path={PAGE_ABOUT} component={PageAbout} />
     <Route exact path={PAGE_ARTICLE} component={PageArticle} />
     <Route exact path={PAGE_ARTICLE_DETAIL} component={PageArticleDetail} />

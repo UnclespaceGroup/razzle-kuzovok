@@ -1,2 +1,26 @@
 @import "./WysiwygLarge.module";
 @import "./WysiwygSmall.module";
+
+.container {
+  ul {
+    margin: 4rem 0;
+
+    li {
+      position: relative;
+      padding-left: 2rem;
+      margin: 1rem 0;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.8rem;
+        display: inline-block;
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 50%;
+        background-color: #c37306;
+      }
+    }
+  }
+}

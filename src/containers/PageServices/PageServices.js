@@ -12,14 +12,14 @@ import ContainerContacts from 'containers/ContainerContacts/ContainerContacts'
 import useDevice from 'hooks/useDevice'
 
 const PageServices = () => {
-  const { mainCards, helmetData, cards, bannerData } = useServices()
+  const { mainCards, meta, cards, banner } = useServices()
   const { currentDevice } = useDevice()
 
   return (
     <div className={css[currentDevice]}>
-      <HelmetComponent {...helmetData} />
+      <HelmetComponent {...meta} />
       <Banner
-        {...bannerData}
+        {...banner}
       />
       <Tabs className={css.tabs} />
       <Layout>

@@ -15,7 +15,8 @@ const FETCH_HOME_PAGE = {
         text,
         images,
         advantages,
-        cards
+        cards,
+        ...otherData
       } = parsedData
 
       return {
@@ -31,7 +32,8 @@ const FETCH_HOME_PAGE = {
         cards: _.map(cards, item => ({
           ...item,
           img: getImgName(item.img)
-        }))
+        })),
+        ...otherData
       }
     }
   }

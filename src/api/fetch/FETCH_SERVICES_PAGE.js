@@ -15,13 +15,17 @@ const FETCH_SERVICES_PAGE = {
           title,
           text,
           img
-        }
+        },
+        ...other
       } = parsedData
 
       return {
-        title,
-        text,
-        img: getImgName(img)
+        banner: {
+          title,
+          text,
+          img: getImgName(img)
+        },
+        ...other
       }
     }
   }

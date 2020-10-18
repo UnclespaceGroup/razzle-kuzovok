@@ -9,7 +9,7 @@ const usePageArticle = () => {
     response: {
       items: responseItems
     } = {}
-  } = useRemoteData(FETCH_ARTICLES())
+  } = useRemoteData(FETCH_ARTICLES(), [])
 
   const items = useMemo(() =>
     _.map(responseItems, ({ banner }) => banner),
@@ -18,7 +18,7 @@ const usePageArticle = () => {
   const {
     response: banner
   } = useRemoteData(FETCH_ARTICLE_PAGE)
-
+  console.log(responseItems)
   const helmetData = {
     title: 'Список полезных статей по ремонту автомобиля',
     description: 'Различные статьи на автомобильную тематику.'

@@ -8,7 +8,8 @@
   }
 
   p {
-    font-weight: 300;
+    font-weight: 400;
+    color: #2a2a2f!important;
   }
 
   h1, h1 * {
@@ -19,7 +20,7 @@
   h2, h2 * {
     font-size: 3.6rem!important;
     font-weight: 400!important;
-    margin: 1rem 0 2rem;
+    margin: 4rem 0 2rem;
   }
 
   h3, h3 * {
@@ -43,31 +44,13 @@
     font-weight: bold!important;
   }
 
+  & + h2 {
+    margin-top: 2.4rem;
+  }
+
   img {
     max-width: 100%;
     margin: 1rem 0;
-  }
-
-  ul {
-    margin: 4rem 0;
-
-    li {
-      position: relative;
-      padding-left: 2rem;
-      margin: 1rem 0;
-
-      &:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0.5rem;
-        display: inline-block;
-        width: 0.8rem;
-        height: 0.8rem;
-        border-radius: 50%;
-        background-color: #c37306;
-      }
-    }
   }
 
   table {

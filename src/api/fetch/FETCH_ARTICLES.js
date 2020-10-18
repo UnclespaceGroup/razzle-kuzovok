@@ -14,6 +14,7 @@ const FETCH_ARTICLES = ({ slug, isSingle } = {}) => ({
   requestFunctions: {
     transformResponse: data => {
       const parsedData = JSON.parse(data)
+
       const items = _.map(parsedData, ({
         title,
         text,
@@ -21,7 +22,7 @@ const FETCH_ARTICLES = ({ slug, isSingle } = {}) => ({
         content,
         slug,
         ...other
-      }) => ({
+      } = {}) => ({
         banner: {
           ...other,
           title,
@@ -31,7 +32,7 @@ const FETCH_ARTICLES = ({ slug, isSingle } = {}) => ({
         },
         content
       }))
-      console.log(items)
+
       return isSingle
         ? items[0]
         : { items }
