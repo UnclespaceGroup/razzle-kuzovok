@@ -1,5 +1,4 @@
 import { axiosAPI } from 'api/axios'
-import { getImgName } from 'utils/getImgName'
 
 const FETCH_ABOUT = {
   axiosInstance: axiosAPI,
@@ -10,14 +9,8 @@ const FETCH_ABOUT = {
     transformResponse: data => {
       const parsedData = JSON.parse(data)
 
-      const { banner, content } = parsedData
-
       return {
-        banner: {
-          ...banner,
-          img: getImgName(banner?.img)
-        },
-        content
+        ...parsedData
       }
     }
   }

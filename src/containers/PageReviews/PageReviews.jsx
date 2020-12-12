@@ -13,7 +13,7 @@ import HelmetComponent from 'components/HelmetComponent/ContainerHelmet'
 const PageReviews = () => {
   const {
     response: items
-  } = useRemoteData(FETCH_REVIEWS())
+  } = useRemoteData(FETCH_REVIEWS(), [])
 
   const {
     response: {

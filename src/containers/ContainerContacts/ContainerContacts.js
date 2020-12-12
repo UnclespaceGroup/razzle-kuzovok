@@ -1,6 +1,5 @@
 import React from 'react'
 import _ from 'lodash'
-import PropTypes from 'prop-types'
 import css from 'containers/ContainerContacts/ContainerContacts.module.scss'
 import { MdMail } from 'react-icons/md'
 import { FaVk, FaInstagram } from 'react-icons/fa'
@@ -32,8 +31,10 @@ const ContainerContacts = () => {
               )
             }
             <li className={css.social}>
-              <a href={vk}><FaVk size='3rem' /></a>
-              <a href={`mailto:${email}`}><MdMail size='3rem' /></a>
+              {/* eslint-disable-next-line react/jsx-no-target-blank */}
+              <a target='_blank' href={vk}><FaVk size='3rem' /></a>
+              {/* eslint-disable-next-line react/jsx-no-target-blank */}
+              <a target='_blank' href={`mailto:${email}`}><MdMail size='3rem' /></a>
               <a><FaInstagram size='3rem' /></a>
             </li>
           </ul>
@@ -41,11 +42,6 @@ const ContainerContacts = () => {
       </Layout>
     </div>
   )
-}
-ContainerContacts.propTypes = {
-  items: PropTypes.array,
-  vk: PropTypes.string,
-  mail: PropTypes.string
 }
 
 export default React.memo(ContainerContacts)

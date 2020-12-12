@@ -2,19 +2,23 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cn from 'classnames'
 import css from './BgImage.module.scss'
+import { getImgName } from 'utils/getImgName'
 
-const BgImage = ({ img, children, className, withLoader, Tag }) => (
-  <Tag
-    className={cn(css.container, className)}
-    style={{ backgroundImage: `url("${img}")` }}
-  >
-    {children}
-    {
-      withLoader && !img &&
+const BgImage = ({ img, children, className, withLoader, Tag }) => {
+  const _img = getImgName(img)
+  return (
+    <Tag
+      className={cn(css.container, className)}
+      style={{ backgroundImage: `url("${_img}")` }}
+    >
+      {children}
+      {
+        withLoader && !img &&
         <div className={css.loader} />
-    }
-  </Tag>
-)
+      }
+    </Tag>
+  )
+}
 BgImage.defaultProps = {
   Tag: 'div'
 }

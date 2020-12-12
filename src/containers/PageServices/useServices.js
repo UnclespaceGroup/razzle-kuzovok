@@ -10,7 +10,7 @@ const useServices = () => {
     response: {
       items
     } = {}
-  } = useRemoteData(FETCH_SERVICES())
+  } = useRemoteData(FETCH_SERVICES(), [])
 
   const {
     response: {

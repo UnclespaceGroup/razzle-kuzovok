@@ -1,5 +1,5 @@
-import { BrowserRouter } from 'react-router-dom'
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
 import { hydrate } from 'react-dom'
 import { Provider } from 'react-redux'
 import { configureStore } from 'reducers'

@@ -15,13 +15,11 @@ const FETCH_SERVICES = ({ slug, isSingle } = {}) => ({
       const parsedData = JSON.parse(data)
 
       const items = _.map(parsedData, ({
-        banner: {
-          title,
-          text,
-          img
-        },
         isMain,
         content,
+        title,
+        text,
+        img,
         ...other
       }) => ({
         banner: {

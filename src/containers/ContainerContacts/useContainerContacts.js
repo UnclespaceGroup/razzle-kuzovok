@@ -9,11 +9,11 @@ const useContainerContacts = () => {
     response: {
       phone,
       address,
-      vk,
-      email,
+      Vk: vk,
+      Email: email,
       time
     } = {}
-  } = useRemoteData(FETCH_CONTACTS)
+  } = useRemoteData(FETCH_CONTACTS, [])
 
   const items = [
     {

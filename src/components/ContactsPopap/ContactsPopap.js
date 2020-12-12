@@ -12,10 +12,10 @@ const ContactsPopap = ({ className }) => {
   const {
     response: {
       phone,
-      email,
-      vk
+      Email: email,
+      Vk: vk
     } = {}
-  } = useRemoteData(FETCH_CONTACTS)
+  } = useRemoteData(FETCH_CONTACTS, [])
 
   return (
     <div className={cn(className)}>

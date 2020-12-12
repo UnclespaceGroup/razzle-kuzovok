@@ -6,7 +6,7 @@ const usePageArticleDetail = () => {
   const { slug } = useParams()
   const {
     response
-  } = useRemoteData(FETCH_ARTICLES({ slug, isSingle: true }))
+  } = useRemoteData(FETCH_ARTICLES({ slug, isSingle: true }), [slug])
 
   return {
     ...response

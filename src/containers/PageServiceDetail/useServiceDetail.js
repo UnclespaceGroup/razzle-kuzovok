@@ -11,7 +11,7 @@ const useServiceDetail = () => {
       banner,
       content
     } = {}
-  } = useRemoteData(FETCH_SERVICES({ slug, isSingle: true }))
+  } = useRemoteData(FETCH_SERVICES({ slug, isSingle: true }), [slug])
 
   const helmetData = {
     title: `${banner?.title || 'Услуга'} | Станция кузовного ремонта Кузовок`,

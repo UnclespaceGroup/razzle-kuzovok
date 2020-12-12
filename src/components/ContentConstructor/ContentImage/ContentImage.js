@@ -4,7 +4,7 @@ import useDevice from 'hooks/useDevice'
 import _ from 'lodash'
 import { getImgName } from 'utils/getImgName'
 
-const ContentImage = ({ images, alt }) => {
+const ContentImage = ({ img: images, title }) => {
   const { currentDevice } = useDevice()
   return (
     <div className={css[currentDevice]}>
@@ -13,7 +13,7 @@ const ContentImage = ({ images, alt }) => {
           <img key={key} src={getImgName(img)} alt='' />
         ))
       }
-      <div className={css.title}>{alt}</div>
+      <div className={css.title}>{title}</div>
     </div>
   )
 }

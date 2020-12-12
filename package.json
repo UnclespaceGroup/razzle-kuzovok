@@ -1,19 +1,16 @@
 {
-  "name": "ruzzle-unclespace",
+  "name": "ruzzle-kuzovok",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "start": "razzle start",
+    "start": "cross-env RAZZLE_IS_LOCAL_API=false razzle start",
+    "start-local-api": "cross-env RAZZLE_IS_LOCAL_API=true razzle start",
     "build": "razzle build",
     "test": "razzle test --env=jsdom",
     "start:prod": "cross-env NODE_ENV=production node build/server.js"
   },
-  "dependencies": {
-    "@aic/react-remote-data-provider": "^3.0.2",
-    "axios": "^0.19.2",
+  "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "classnames": "^2.2.6",
-    "cross-env": "^7.0.2",
     "eslint": "^7.5.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-config-standard-react": "^9.2.0",
@@ -25,12 +22,19 @@
     "eslint-plugin-react-hooks": "^4.0.4",
     "eslint-plugin-sort-keys-fix": "^1.1.0",
     "eslint-plugin-standard": "^4.0.1",
+    "prop-types": "^15.7.2",
+    "razzle-plugin-eslint": "^3.1.5"
+  },
+  "dependencies": {
+    "@aic/react-remote-data-provider": "^3.0.2",
+    "axios": "^0.19.2",
+    "babel-eslint": "^10.1.0",
+    "classnames": "^2.2.6",
+    "cross-env": "^7.0.2",
     "express": "^4.17.1",
     "lodash": "^4.17.19",
     "moment": "^2.27.0",
-    "prop-types": "^15.7.2",
     "razzle": "^3.1.5",
-    "razzle-plugin-eslint": "^3.1.5",
     "razzle-plugin-scss": "3.1.5",
     "react": "^16.13.1",
     "react-app-polyfill": "^1.0.6",
@@ -38,7 +42,7 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^3.10.0",
-    "react-id-swiper": "^4.0.0",
+    "react-id-swiper": "1.6.9",
     "react-markdown": "^4.3.1",
     "react-redux": "^7.2.0",
     "react-router": "^5.2.0",
@@ -52,11 +56,5 @@
     "serialize-javascript": "^4.0.0",
     "swiper": "^6.0.4",
     "ua-parser-js": "^0.7.21"
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx}": [
-      "eslint --fix",
-      "git add"
-    ]
   }
 }

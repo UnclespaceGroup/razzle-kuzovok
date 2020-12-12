@@ -14,8 +14,8 @@ const usePageCarDetail = () => {
       content,
       works
     } = {}
-  } = useRemoteData(FETCH_CARS_DETAIL({ slug }))
-  console.log(works)
+  } = useRemoteData(FETCH_CARS_DETAIL({ slug }), [slug])
+
   const meta = {
     title: `Кузовок - ${title || ''} ${text?.toLowerCase() || 'обслуживание автомобиля'}`
   }

@@ -16,7 +16,7 @@ function PageHome () {
       cards,
       meta
     } = {}
-  } = useRemoteData(FETCH_HOME_PAGE)
+  } = useRemoteData(FETCH_HOME_PAGE, [])
   const { currentDevice } = useDevice()
 
   return (

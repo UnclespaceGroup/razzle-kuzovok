@@ -3,6 +3,6 @@ module.exports = {
     'scss',
     {
       name: 'eslint'
-    },
-  ],
+    }
+  ]
 }

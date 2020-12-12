@@ -1,1 +1,6 @@
-export const getImgName = (img) => img && process.env.RAZZLE_API_URL + img?.url
+import { serverApi } from 'api/axios'
+
+export const getImgName = (img) =>
+  typeof img === 'object'
+    ? serverApi + img?.url
+    : img

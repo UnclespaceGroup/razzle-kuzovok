@@ -6,7 +6,7 @@ const useAboutPhotos = () => {
     response: {
       content
     } = {}
-  } = useRemoteData(FETCH_ABOUT)
+  } = useRemoteData(FETCH_ABOUT, [])
 
   return {
     content

@@ -5,11 +5,11 @@ import FETCH_CARS_PAGE from 'api/fetch/FETCH_CARS_PAGE'
 const usePageCars = () => {
   const {
     response: items
-  } = useRemoteData(FETCH_CARS())
+  } = useRemoteData(FETCH_CARS(), [])
 
   const {
     response
-  } = useRemoteData(FETCH_CARS_PAGE)
+  } = useRemoteData(FETCH_CARS_PAGE, [])
 
   return {
     items,

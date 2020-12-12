@@ -5,9 +5,9 @@ import FETCH_ABOUT from 'api/fetch/FETCH_ABOUT'
 const useAbout = () => {
   const {
     response: {
-      banner
+      ...banner
     } = {}
-  } = useRemoteData(FETCH_ABOUT)
+  } = useRemoteData(FETCH_ABOUT, [])
 
   const items = [
     {

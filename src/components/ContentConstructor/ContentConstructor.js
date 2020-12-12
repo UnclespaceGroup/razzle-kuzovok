@@ -6,7 +6,7 @@ import ContentImage from 'components/ContentConstructor/ContentImage/ContentImag
 
 const contentTypes = {
   textBlock: 'text-block.text-block',
-  imgBlock: 'image-block.image-block'
+  imgBlock: 'img-block.img-block'
 }
 
 const getContentByType = ({ __component, ...item }, key) => {
