@@ -14,6 +14,7 @@ import ContactsPopap from 'components/ContactsPopap/ContactsPopap'
 
 const Banner = ({ title, text, img, icon, backLink, beforeTitleBlock }) => {
   const { currentDevice, isLarge } = useDevice()
+
   return (
     <BgImage img={img} withLoader>
       <div className={cn(css[currentDevice])}>

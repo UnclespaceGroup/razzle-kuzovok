@@ -11,20 +11,14 @@ const FETCH_HOME_PAGE = {
     transformResponse: data => {
       const parsedData = JSON.parse(data)
       const {
-        title,
-        text,
-        images,
         advantages,
         cards,
+        banner,
         ...otherData
       } = parsedData
 
       return {
-        bannerItems: _.map(images, img => ({
-          title,
-          text,
-          img: getImgName(img)
-        })),
+        ...banner,
         advantages: _.map(advantages, item => ({
           ...item,
           img: getImgName(item.img)
